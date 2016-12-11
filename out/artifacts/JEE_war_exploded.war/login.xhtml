@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xml:lang="en" lang="en">
+<h:head>
+    <title>Login Form</title>
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="3">
+            <h:outputLabel value="First Name:"/>
+            <h:inputText id="firstname" required="true" requiredMessage="please 3amer 3ad !" value="#{student.firstname}" a:placeholder="chesmek ya 9atous"/>
+            <h:message for="firstname" class="error_message"/>
+
+             <h:outputLabel value="Password : "/>
+            <h:inputText id="password"  required="true" requiredMessage="please 3amer 3ad !" value="#{student.password}" a:placeholder="ou la9abek?"/>
+            <h:message for="password" class="error_message"/>
+
+            <h:commandButton value="Submit" action="#{student.action()}"/>
+        </h:panelGrid>
+
+    </h:form>
+</h:body>
+</html>
